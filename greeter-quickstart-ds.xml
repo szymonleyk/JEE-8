@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+    <datasource jndi-name="java:jboss/datasources/GreeterQuickstartDS"
+                pool-name="greeter-quickstart" enabled="true" use-java-context="true">
+        <connection-url>jdbc:mysql://localhost:3306/sklep-db</connection-url>
+        <driver>mysql</driver>
+        <security>
+            <user-name>sklep-db-user</user-name>
+            <password>abc123</password>
+        </security>
+    </datasource>
+    <drivers>
+        <driver name="mysql" module="com.mysql">
+            <xa-datasource-class>com.mysql.cj.jdbc.Driver</xa-datasource-class>
+        </driver>
+    </drivers>
+</datasources>
